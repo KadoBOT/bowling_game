@@ -1,9 +1,8 @@
 var BowlingGame = (function () {
     function BowlingGame() {
         this.roundBall = 1;
-        this.round_max = 20;
+        this.round_max = 10;
         this.round = 1;
-        this.round_points = 0;
         this.pins = 10;
         this.pinsLeft = 10;
         this.pinsHit = 0;
@@ -20,7 +19,7 @@ var BowlingGame = (function () {
             this.countPins();
         }
         var node = document.createElement("span");
-        if (this.round == 20) {
+        if (this.round == this.round_max) {
         }
         if (this.pinsHit != this.pins) {
             var second_score = Math.floor(Math.random() * this.pinsLeft);

@@ -1,8 +1,7 @@
 class BowlingGame{
   roundBall: number = 1;
-  round_max: number = 20;
+  round_max: number = 10;
   round: number = 1;
-  round_points = 0;
   pins: number = 10;
   pinsLeft: number = 10;
   pinsHit: number = 0;
@@ -24,7 +23,7 @@ class BowlingGame{
       this.countPins();
     }
     const node = document.createElement("span");
-    if(this.round == 20){
+    if(this.round == this.round_max){
 
     }
     if(this.pinsHit != this.pins){
