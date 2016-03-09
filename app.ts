@@ -84,7 +84,11 @@ class BowlingGame{
       if(this.bonusStrike){
         let totalScore = this.total[this.round - 1] + 10;
         this.total[this.round - 2] = totalScore + this.total[this.round - 2];
-        document.getElementById("round-" + (this.round - 1).toString()).querySelector('#total').innerHTML = this.total[this.round-2].toString();
+        let total = this.total.reduce((a, b) => {
+         return a + b;
+        });
+        let update = total - this.total[this.round -1];
+        document.getElementById("round-" + (this.round - 1).toString()).querySelector('#total').innerHTML = update.toString();
         console.log(this.total)
         this.bonusStrike = false;
       }

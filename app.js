@@ -81,7 +81,11 @@ var BowlingGame = (function () {
             if (this.bonusStrike) {
                 var totalScore_2 = this.total[this.round - 1] + 10;
                 this.total[this.round - 2] = totalScore_2 + this.total[this.round - 2];
-                document.getElementById("round-" + (this.round - 1).toString()).querySelector('#total').innerHTML = this.total[this.round - 2].toString();
+                var total = this.total.reduce(function (a, b) {
+                    return a + b;
+                });
+                var update = total - this.total[this.round - 1];
+                document.getElementById("round-" + (this.round - 1).toString()).querySelector('#total').innerHTML = update.toString();
                 console.log(this.total);
                 this.bonusStrike = false;
             }
