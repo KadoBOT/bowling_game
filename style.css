@@ -23,3 +23,9 @@
     float: right;
     text-align: center;
 }
+div#total {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 6px;
+}
