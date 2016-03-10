@@ -1,0 +1,31 @@
+.scorecard {
+    border: 2px solid black;
+    width: 530px;
+    height: 50px;
+}
+#round-10{
+  width: 70px !important;
+  height: 100%;
+  float: left;
+  border-right: 1px solid black;
+}
+.score {
+    width: 50px;
+    height: 100%;
+    float: left;
+    border-right: 1px solid black;
+}
+.ball2, .ball1, .ball3{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 20px;
+    height: 20px;
+    float: right;
+    text-align: center;
+}
+div#total {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 6px;
+}
